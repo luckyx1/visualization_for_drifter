@@ -12,6 +12,9 @@ gem 'sass-rails', '~> 4.0.2'
 #for location
 gem 'geocoder'
 
+#needed for heroku
+gem 'rails_12factor'
+
 #protection
 gem 'protected_attributes'
 
