@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  time: MyString
+  valid: false
+  gps_speed: 1.5
+
+two:
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  time: MyString
+  valid: false
+  gps_speed: 1.5

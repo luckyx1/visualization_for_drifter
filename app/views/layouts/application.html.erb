@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js" , "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

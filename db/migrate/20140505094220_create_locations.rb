@@ -1,0 +1,13 @@
+class CreateLocations < ActiveRecord::Migration
+  def change
+    create_table :locations do |t|
+      t.string :address
+      t.float :latitude
+      t.float :longitude
+      t.string :time
+      t.boolean :valid_input
+      t.float :gps_speed
+      t.timestamps
+    end
+  end
+end
