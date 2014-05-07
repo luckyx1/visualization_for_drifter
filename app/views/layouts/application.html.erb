@@ -2,10 +2,14 @@
 <html>
 <head>
   <title>Leaflet</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js" , "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+  <script src="dist/leaflet.awesome-markers.js"></script>
+
 
   <%= csrf_meta_tags %>
 </head>
