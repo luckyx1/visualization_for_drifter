@@ -8,6 +8,7 @@ class CreateLocations < ActiveRecord::Migration
       t.string :time
       t.boolean :valid_input
       t.float :gps_speed
+      t.text :drifter_name
       t.timestamps
     end
   end

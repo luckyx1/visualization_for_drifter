@@ -1,21 +1,10 @@
 <div id="map">
 	
 	<script>
-			//var map = L.map('map').setView([38.2392497336007, -121.517373829461], 13);
 
-			var map = new L.Map('map', {center: new L.LatLng(38.2392497336007, -121.517373829461), zoom: 14});
+			var map = new L.Map('map', {center: new L.LatLng(38.2392497336007, -121.517373829461), zoom: 16});
       		var googleLayer = new L.Google('SATELLITE');
       		map.addLayer(googleLayer);
-/*
-			L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-				maxZoom: 18,
-				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-					'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-				id: 'luckyx1.i5hk2d1n'
-			}).addTo(map);
-*/
-
 			 var adjust = L.AwesomeMarkers.icon({
 			    icon: 'fa-adjust',
 			    prefix: 'fa',
@@ -129,8 +118,6 @@
 				<% end%>
 			<% end%>
 			
-
-
 			var popup = L.popup();
 			function onMapClick(e) {
 				popup
