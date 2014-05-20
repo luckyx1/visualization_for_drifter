@@ -3,3 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #map { height: 1000px;
 	 }
+.leaflet-map-pane{
+	z-index: 2! important;
+}
+.leaflet-google-layer{
+	z-index:1 !important;
+}

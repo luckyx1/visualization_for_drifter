@@ -56,4 +56,5 @@ Leaflet::Application.routes.draw do
   #     resources :products
   #   end
   get "test" => 'locations#test', :as => "test"
+  get "simulation" => 'locations#simulation', :as => "simulation"
 end

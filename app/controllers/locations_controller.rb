@@ -83,6 +83,12 @@ class LocationsController < ApplicationController
     @l19 = Location.where('id > ? AND id < ?',1170,1235)
     @l20 = Location.where('id > ? AND id < ?',1235,1300)
     @l21 = Location.where('id > ? AND id < ?',1300,1365)
+    @l0 = Location.where('id <?',20)
+  end
+
+  def simulation
+    @l0 = Location.where('id <?',20)
+
   end
 
   private

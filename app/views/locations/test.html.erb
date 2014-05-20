@@ -1,8 +1,12 @@
 <div id="map">
 	
 	<script>
-			var map = L.map('map').setView([38.2392497336007, -121.517373829461], 13);
+			//var map = L.map('map').setView([38.2392497336007, -121.517373829461], 13);
 
+			var map = new L.Map('map', {center: new L.LatLng(38.2392497336007, -121.517373829461), zoom: 14});
+      		var googleLayer = new L.Google('SATELLITE');
+      		map.addLayer(googleLayer);
+/*
 			L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 				maxZoom: 18,
 				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -10,6 +14,8 @@
 					'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 				id: 'luckyx1.i5hk2d1n'
 			}).addTo(map);
+*/
+
 			 var adjust = L.AwesomeMarkers.icon({
 			    icon: 'fa-adjust',
 			    prefix: 'fa',
@@ -115,111 +121,14 @@
 			    prefix: 'fa',
 			    markerColor:'orange'
 			  });
-			<% if @l1.any? %>
-				<% @l1.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: adjust}).addTo(map)
+
+			<% if @l0.any? %>
+				<% @l0.each do |location| %>
+				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>Hello I am a robot withoutlabel #{location} is time, #{location.valid} is valid, and  #{loation.gps_speed} is my speed</b>").openPopup();
+
 				<% end%>
 			<% end%>
-			<% if @l2.any? %>
-				<% @l2.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: asterisk}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l3.any? %>
-				<% @l3.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: down}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l4.any? %>
-				<% @l4.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: archive}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l5.any? %>
-				<% @l5.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: circle}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l6.any? %>
-				<% @l6.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: cloud}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l7.any? %>
-				<% @l7.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: certificate}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l8.any? %>
-				<% @l8.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: fighter_jet}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l9.any? %>
-				<% @l9.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: coffee}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l10.any? %>
-				<% @l10.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: cog}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l11.any? %>
-				<% @l11.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: bug}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l12.any? %>
-				<% @l12.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: beer}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l13.any? %>
-				<% @l13.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: arrow}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l14.any? %>
-				<% @l14.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: dot}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l15.any? %>
-				<% @l15.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: plus}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l16.any? %>
-				<% @l16.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: rocket}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l17.any? %>
-				<% @l17.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l18.any? %>
-				<% @l18.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: star}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l19.any? %>
-				<% @l19.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: shopping}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l20.any? %>
-				<% @l20.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: trophy}).addTo(map)
-				<% end%>
-			<% end%>
-			<% if @l21.any? %>
-				<% @l21.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: tachometer}).addTo(map)
-				<% end%>
-			<% end%>
+			
 
 
 			var popup = L.popup();
