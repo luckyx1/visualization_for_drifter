@@ -2,7 +2,7 @@
 	
 	<script>
 
-			var map = new L.Map('map', {center: new L.LatLng(38.2392497336007, -121.517373829461), zoom: 16});
+			var map = new L.Map('map', {center: new L.LatLng(38.23422, -121.52038), zoom: 16});
       		var googleLayer = new L.Google('SATELLITE');
       		map.addLayer(googleLayer);
 			 var adjust = L.AwesomeMarkers.icon({
@@ -110,7 +110,6 @@
 			    prefix: 'fa',
 			    markerColor:'orange'
 			  });
-
 			<% if @l0.any? %>
 				<% @l0.each do |location| %>
 				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>Hello I am a robot withoutlabel #{location} is time, #{location.valid} is valid, and  #{loation.gps_speed} is my speed</b>").openPopup();

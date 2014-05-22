@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140505094220) do
     t.string   "time"
     t.boolean  "valid_input"
     t.float    "gps_speed"
+    t.text     "drifter_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

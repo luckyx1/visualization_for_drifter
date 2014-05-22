@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @location.address %>
+  <strong>Drifter Name:</strong>
+  <%= @location.drifter_name %>
 </p>
 
 <p>
@@ -33,6 +33,12 @@
   <strong>Gps speed:</strong>
   <%= @location.gps_speed %>
 </p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>

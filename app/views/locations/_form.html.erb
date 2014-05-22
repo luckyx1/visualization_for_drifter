@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :drifter_name %><br>
+    <%= f.text_field :drifter_name %>
+  </div>
+  <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
@@ -35,6 +39,7 @@
     <%= f.label :gps_speed %><br>
     <%= f.text_field :gps_speed %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
