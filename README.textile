@@ -1,11 +1,6 @@
-h1. README for InternLeagues
+h1. README for Visualization Tool for Professor Fox
 
-InterLeagues is a site that helps establish that bridge between college students and companies Globaly, and acts as a central repository for the Global Internship @ college.
 
-InternLeagues is as follows a startup that differs from other sites by these key factors:
-	* A learning algorithm within search based on user's past search history.
-	* Companies searching for users as well as Users search for Opportunities.
-	* A unique application process in which we email the users info to companies that would have been previously required before from other application sites for comapanies.
 
 h1. Useful links
 
@@ -13,13 +8,7 @@ h2. Learn SQL comands for POSTSQL DB
 * "Command comands":http://www.postgresql.org/docs/9.3/static/sql.html
 
 h2 More Resources(that helped me in developing this:
-* "heroku":https://devcenter.heroku.com/articles/heroku-postgresql
-* "consider this script for future use": https://gist.github.com/sowenjub/1033876
-* "questions on postgress and rails":http://ridingrails.net/rails-localhost-postgresql/
-* "how to transfer": https://devcenter.heroku.com/articles/heroku-postgres-import-export
-* "CSV to Postgres": http://stackoverflow.com/questions/2987433/how-to-import-csv-file-data-into-a-postgres-table
-* "POSTGRES to CSV": http://stackoverflow.com/questions/1517635/save-postgres-sql-output-to-csv-file
-
+* "Drifters":http://float.berkeley.edu/drifters
 
 h1. Install InternLeagues locally
 
