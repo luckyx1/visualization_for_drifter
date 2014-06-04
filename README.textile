@@ -20,7 +20,7 @@ To Install the toll, you must have POSTSQL downloaded locally on your computer
 
 Download POSTSQL stable version at http://www.postgresql.org/download/
 
-h2. 2. Install InternLeague
+h2. 2. Install the tool
 
 To get a new repository on your local computer:
 
