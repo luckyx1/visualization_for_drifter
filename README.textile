@@ -7,16 +7,16 @@ h1. Useful links
 h2. Learn SQL comands for POSTSQL DB
 * "Command comands":http://www.postgresql.org/docs/9.3/static/sql.html
 
-h2. More Resources(that helped me in developing this:
+h2. Resource page of our previous work:
 * "Drifters":http://float.berkeley.edu/drifters
 
-h1. Install InternLeagues locally
+h1. Install Visualization tool locally
 
-Installing InternLeagues to run locally is trivla, and steps are as follows.
+Installing the tool to run locally is trival, and steps are as follows.
 
 h2. 1. Prequisites
 
-To Install Internleagues, you must have POSTSQL downloaded locally on your computer
+To Install the toll, you must have POSTSQL downloaded locally on your computer
 
 Download POSTSQL stable version at http://www.postgresql.org/download/
 
@@ -24,9 +24,9 @@ h2. 2. Install InternLeague
 
 To get a new repository on your local computer:
 
-* Starting from Desktop, mkdir Internleague on your terminal
-* cd Internleague
-* git clone https://github.com/luckyx1/InterLeagues.git
+* Starting from Desktop, mkdir "visualization" on your terminal
+* cd "visualization"
+* git clone git@github.com:luckyx1/visualization_for_drifter.git
 * now you have everything!
 
 h2. 2 1/2. Running InternLeagues for the first time
@@ -36,7 +36,7 @@ h2. 2 1/2. Running InternLeagues for the first time
 * 3. "": rails s(assuming your postsql is running in the background, consult the POSTSQL doc to see how to do that for your computer)
 * 4. go to 0.0.0.0:3000 to see it locally!
 
-h2. 3 Daily InternLeague use
+h2. 3 Daily Visualization use
 
 To check if new updates has happened (while you have created no new content)
 * git pull
@@ -72,9 +72,9 @@ To update branch
 To update master with branch
 * git merge branch master
 
-h2. 4 Heroku and InternLeague
+h2. 4 Heroku and Visulization tool
 
-Currently InternLeague is being hosted on InternLeague, so as follows, here is a guide to make heroku your friend and work with the app accordily.
+Currently the tool is being hosted on Heroku, so as follows, here is a guide to make heroku your friend and work with the app accordily.
 
 To push to heroku do
 * git add -A
@@ -88,16 +88,6 @@ h1. Updating DB
 
 To update the database using POSTSQL, a backup must be initiated to keep data consistent.
 
-while inside the Internleagues folder:
-	1. call bash pull_db_from_heroku.sh
-	This will create a local db called mydb(removes it if it exist prior to this)
-	2. call bash backup_heroku.sh to also get the dump file locally
-	This returns a mydb.dump equivalent as the mydb above(this is just for double checking haha)
-	3. call bash shift_to_production.sh
-	This will shift your working InternLeague_development db to a mylocaldb to be pushed to heroku
-	4. call bash update_heroku_db.sh
-	This will wipe heroku db, update with this, and set the seeds
-And thats it!
 
 OR do all this in one go with the following:
 	bash heroku_update.sh
