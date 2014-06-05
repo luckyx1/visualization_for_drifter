@@ -1,4 +1,4 @@
-h1. README for Visualization Tool for Professor Fox
+h1. README for Visualization Tool for Professor Bayen
 
 
 
@@ -29,7 +29,7 @@ To get a new repository on your local computer:
 * git clone git@github.com:luckyx1/visualization_for_drifter.git
 * now you have everything!
 
-h2. 2 1/2. Running InternLeagues for the first time
+h2. 2 1/2. Running Visualization Tool for the first time
 
 * 1. run the following: rake db:migrate
 * 2. "": rake db:seed
