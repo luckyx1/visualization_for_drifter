@@ -124,21 +124,19 @@ UPDATE opportunities SET id=nextval('opportunities_id_seq');
 UPDATE opportunities
 SET id = nextval('opportunities_id_seq');
 
-h1. 6 Maintainers
+h1. 6. Maintainers
 
-This is a list of the team as of 05/01/2014. If you have committed to this project, please add your name and contact to the list.
+This is a list of the team as of 06/05/2014. If you have committed to this project, please add your name and contact to the list.
 
-h2. League of Awesome~
+h2. Drift team~
 
-*Sarah Wang* <chenjianzhong@berkeley.edu>
 *Robert Erick Hernandez Jr.* <r.hernandez@berkeley.edu>
-*John Okahata* <shadowsniper707@gmail.com>
-*Eric Nguyen* <nguyen.eric@ymail.com>
-*Jianzhong Chen* <harryjianzhongchen@gmail.com>
+*Deepak* <r.hernandez@berkeley.edu>
+*Nicolas Plain* <r.hernandez@berkeley.edu>
 
-h2. Written by (last update May 2, 2014) 
-
+h2. Written by (last update June 5, 2014) 
 *Robert Erick Hernandez Jr*
 
+
 Enjoy,
-The InternLeague Team~
+The WaterDrifter Team~
