@@ -1,7 +1,5 @@
-<div id="map">
-	
+<div id="map">	
 	<script>
-
 			var map = new L.Map('map', {center: new L.LatLng(38.23422, -121.52038), zoom: 16});
       		var googleLayer = new L.Google('SATELLITE');
       		map.addLayer(googleLayer);
@@ -112,8 +110,13 @@
 			  });
 			<% if @l0.any? %>
 				<% @l0.each do |location| %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>Hello I am a robot withoutlabel #{location} is time, #{location.valid} is valid, and  #{loation.gps_speed} is my speed</b>").openPopup();
+				<% valid = location.valid_input.to_s %>
+				<% name = location.drifter_name.to_s %>
+				<% time = location.time.to_s %>
+				<% speed = location.gps_speed %>
 
+
+				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>Hello I am a robot "+"<%= name %>"+". My current time reading was @ "+"<%= time %>"+". I am valid?="+"<%= (valid == true) %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
 				<% end%>
 			<% end%>
 			
