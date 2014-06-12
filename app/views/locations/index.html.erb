@@ -9,7 +9,6 @@
       <th>Time</th>
       <th>Valid</th>
       <th>Gps speed</th>
-      <th>Address</th>
       <th></th>
       <th></th>
       <th></th>
@@ -25,7 +24,6 @@
         <td><%= location.time %></td>
         <td><%= location.valid_input %></td>
         <td><%= location.gps_speed %></td>
-        <td><%= location.address %></td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>

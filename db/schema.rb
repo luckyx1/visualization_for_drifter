@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140505094220) do
   enable_extension "plpgsql"
 
   create_table "locations", force: true do |t|
-    t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "time"

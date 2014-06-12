@@ -22,11 +22,8 @@
 
 <p>
   <strong>Valid:</strong>
-  <%if @location.valid_input %>
-  <%=true%>
-  <%else%>
-  <%=false%>
-  <%end%>
+  <%= @location.valid_input == true %>
+  
 </p>
 
 <p>
@@ -34,10 +31,7 @@
   <%= @location.gps_speed %>
 </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @location.address %>
-</p>
+
 
 
 <%= link_to 'Edit', edit_location_path(@location) %> |

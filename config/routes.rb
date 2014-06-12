@@ -55,6 +55,7 @@ Leaflet::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  post 'data' => 'locations#create'
   get "test" => 'locations#test', :as => "test"
   get "simulation" => 'locations#simulation', :as => "simulation"
 end

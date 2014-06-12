@@ -114,8 +114,6 @@
 				<% name = location.drifter_name.to_s %>
 				<% time = location.time.to_s %>
 				<% speed = location.gps_speed %>
-
-
 				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>Hello I am a robot "+"<%= name %>"+". My current time reading was @ "+"<%= time %>"+". I am valid?="+"<%= (valid == true) %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
 				<% end%>
 			<% end%>
