@@ -1,6 +1,9 @@
 <div id="map">	
 	<script>
-			var map = new L.Map('map', {center: new L.LatLng(38.23422, -121.52038), zoom: 16});
+			<%= first_long = Location.first.longitude %>
+			<%= first_lat = Location.first.latitude%>
+			var map = new L.Map('map', {center: new L.LatLng(<%= first_lat%>-0.36093, <%= first_long%>+.26494), zoom: 16});
+			//0.36093, -122.25803
       		var googleLayer = new L.Google('SATELLITE');
       		map.addLayer(googleLayer);
 			 var adjust = L.AwesomeMarkers.icon({
