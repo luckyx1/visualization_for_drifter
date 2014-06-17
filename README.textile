@@ -87,7 +87,15 @@ To push to heroku do
 h1. Updating DB
 
 To update the database using POSTSQL, a backup must be initiated to keep data consistent.
-
+	The following is how we suggest the use of the DB
+	1. To prepare db for new data:
+		bash pull_db_from_heroku.sh
+		bash dump_heroku.sh
+		bash heroku_reset.sh
+	2. If you want to clear data locally do
+		bash clean_up.sh
+	3. If you want to put data currently on local to heroku do:
+		bash mirror_local.sh
 
 OR do all this in one go with the following:
 	bash heroku_update.sh
