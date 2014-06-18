@@ -1,42 +1,44 @@
-<%= form_for(@location) do |f| %>
-  <% if @location.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
-
-      <ul>
-      <% @location.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @location, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :latitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :latitude, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :longitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :longitude, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :time, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :valid_input, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :valid_input, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :gps_speed, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :gps_speed, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :drifter_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :drifter_name, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :drifter_name %><br>
-    <%= f.text_field :drifter_name %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br>
-    <%= f.text_field :time %>
-  </div>
-  <div class="field">
-    <%= f.label :valid_input %><br>
-    <%= f.check_box :valid_input %>
-  </div>
-  <div class="field">
-    <%= f.label :gps_speed %><br>
-    <%= f.text_field :gps_speed %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                locations_path, :class => 'btn' %>
   </div>
 <% end %>
