@@ -9,3 +9,35 @@
 .leaflet-google-layer{
 	z-index:1 !important;
 }
+
+body{
+	background-color:#005199 !important;
+}
+
+#sidebar{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    top:0px;
+    width:400px;
+    height:100%;
+    background-color:#005199;
+}
+
+#title{
+	color:yellow;
+	background-color:#005199;
+	height: 2em;
+	font-size: 2em;
+	border-radius: 2em;
+}
+#explanation{
+	color:yellow;
+}
+a:hover{
+	//height: 44px;
+	//width: 53px;
+    //color: yellow !important;
+    //background-color: yellow; 
+  	//text-decoration: none;
+}
