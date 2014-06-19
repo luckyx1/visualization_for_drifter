@@ -67,12 +67,7 @@ class LocationsController < ApplicationController
     if @id==nil
       @l0 = Location.all
     else
-      puts "entering iddddddd"
-      puts @id
-      @l0 = Location.find_all_by_drifter_name("A"+@id.to_s)
-      puts "A"+@id.to_s
-      puts @l0.count
-      puts "rendering"
+      @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
     end
   end
 
