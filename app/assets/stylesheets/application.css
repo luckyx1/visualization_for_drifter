@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+#header{
+	color:yellow;
+	background-color:#151515;
+	height: 2em;
+	font-size: 2em;
+	border-radius: 2em;
+	margin: auto;
+	width: 25%;
+
+}
+#footer-navbar{
+	background-color:#005199;
+	font-size: 2em;
+	border-radius: 2em;
+}
+

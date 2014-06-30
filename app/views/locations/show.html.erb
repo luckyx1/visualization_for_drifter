@@ -18,6 +18,8 @@
   <dd><%= @location.drifter_name %></dd>
 </dl>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               locations_path, :class => 'btn'  %>

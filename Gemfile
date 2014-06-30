@@ -10,7 +10,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.2'
 
 #for location
-gem 'geocoder'
+#gem 'geocoder'
 
 #needed for heroku
 gem 'rails_12factor'
