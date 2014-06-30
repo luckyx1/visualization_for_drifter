@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Leaflet</title>
+  <title>Leaflet Drifter</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
@@ -14,7 +14,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+            <%= link_to "Dog Park", root_path, id: "logo" %>
+            <nav>
+                <ul class="nav pull-right">
+                    <li><%= link_to "Home", root_path %></li>
+                    <li><%= link_to "About", test_path %></li>
+                    <li><%= link_to "Help", test_path %></li>
+                    <li><%= link_to "Play Time", '#' %></li>
+                </ul>
+            </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+        <%= yield %>
+    </div>
 </div>
 </body>
 </html>
