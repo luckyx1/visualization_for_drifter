@@ -64,12 +64,12 @@ class LocationsController < ApplicationController
   end
 
   def test
-    if params[:id].present?
+    if params[:val].present?
       @id = params[:id]
       @specific = true
       @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
       @l0 = @l.last
-    elsif params[:val].present?
+    elsif params[:id].present?
       @id = params[:id]
       @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
     else
