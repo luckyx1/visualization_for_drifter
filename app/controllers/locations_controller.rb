@@ -79,7 +79,15 @@ class LocationsController < ApplicationController
 
   def simulation
     @l0 = Location.all
+  end
 
+  def menu
+  end
+
+  def history
+  end
+
+  def live
   end
 
   private

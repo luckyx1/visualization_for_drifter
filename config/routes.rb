@@ -58,4 +58,7 @@ Leaflet::Application.routes.draw do
   post 'data' => 'locations#create'
   get "test" => 'locations#test', :as => "test"
   get "simulation" => 'locations#simulation', :as => "simulation"
+  get "menu" => 'locations#menu', :as => "menu"
+  get "history" => "locations#history", :as => "history"
+  get "live" => "locations#live", :as => "live"
 end

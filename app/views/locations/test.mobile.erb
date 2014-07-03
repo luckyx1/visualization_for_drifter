@@ -1,8 +1,19 @@
 Hello this is mobile!
 <p>
   <% if mobile_device? %>
-    <%= link_to "Full Site", :mobile => 0 %>
+    <%= link_to "Full Site", params.merge(:mobile => 0 ),class: "btn btn-success" %>
   <% else %>
-    <%= link_to "Mobile Site", :mobile => 1 %>
+    <%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-success"%>
   <% end %>
 </p>
+
+<h2> Please choose from the following drifters or select all</h2>
+
+<p>1</P>
+
+
+
+
+<p>20</p>
+<p>all<p>
+<%= link_to "Menu", menu_path, class: "btn btn-info"%>	

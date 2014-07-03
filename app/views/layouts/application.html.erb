@@ -18,6 +18,7 @@
  <body id="<%= params[:controller]+"-"+params[:action] %>">
     <%= render partial: "/layouts/header" %>
       <%= yield %>
-    <%= render partial: "/layouts/footer" %>
   </body>
+  <%= render partial: "/layouts/footer" %>
+
 </html>
