@@ -88,6 +88,17 @@ class LocationsController < ApplicationController
   end
 
   def live
+    if params[:val].present?
+      @id = params[:id]
+      @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+    elsif params[:id].present?
+      @id = params[:id]
+      @specific = true
+      @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+      @l0 = @l.last
+    else
+      @l0 = Location.all
+    end
   end
 
   private
