@@ -8,14 +8,14 @@
       <!-- Collect the nav links for footer -->
       <div class="collapse navbar-collapse" id="footer-navbar">
         <ul class="nav navbar-nav navbar-left">
-          <li><%= link_to image_tag("drifter.png"), test_path(:id => 1), class: "btn btn-inverse"%></li>
-          <li><%= link_to "History", test_path(:val => "all",:id => 1), class: "btn btn-inverse" %></li>
-          <li><%= link_to "Data", "/locations", class: "btn btn-inverse" %></li>
-          <li><%= link_to "Live", "/test", class: "btn btn-inverse" %></li>
+          <li><%= link_to image_tag("drifter.png"), test_path(:id => 1), class: "btn btn-info"%></li>
+          <li><%= link_to "History", history_path, class: "btn btn-info" %></li>
+          <li><%= link_to "Data", "/locations", class: "btn btn-info" %></li>
+          <li><%= link_to "Live", "/live", class: "btn btn-info" %></li>
             <% if mobile_device? %>
-          <li> <%= link_to "Full Site", params.merge(:mobile => 0 ),class: "btn btn-inverse" %></li>
+          <li> <%= link_to "Full Site", params.merge(:mobile => 0 ),class: "btn btn-info" %></li>
             <% else %>
-          <li><%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-inverse"%></li>
+          <li><%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-info"%></li>
             <% end %>
         </ul>
         <button type="button" class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#footer-navbar">
