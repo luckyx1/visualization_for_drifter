@@ -3,22 +3,26 @@
   <head>
     <title>Leaflet Drifter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic Global javascript and css-->
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <!-- Mobile support-->
     <%= stylesheet_link_tag 'mobile' if mobile_device? %>
+    <!-- leaflet css and java script -->
     <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js" , "data-turbolinks-track" => true %>
-    <%= stylesheet_link_tag href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" , media: "all", "data-turbolinks-track" => true %>
+    <!-- fontmarker and integration to leaflet -->
+    <%= stylesheet_link_tag href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"  %>
     <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
     <script src="dist/leaflet.awesome-markers.js"></script>
+    <!-- integrating google map and leaflet -->
     <%= javascript_include_tag "http://matchingnotes.com/javascripts/leaflet-google.js", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "http://maps.google.com/maps/api/js?v=3.2&sensor=false", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
- <body id="<%= params[:controller]+"-"+params[:action] %>">
+  <body id="<%= params[:controller]+"-"+params[:action] %>">
     <%= render partial: "/layouts/header" %>
-      <%= yield %>
+    <%= yield %>
   </body>
   <%= render partial: "/layouts/footer" %>
-
 </html>

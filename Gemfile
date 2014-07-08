@@ -19,6 +19,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 #for location
 #gem 'geocoder'
+gem 'puma'
+gem "rack-timeout"
+gem 'jquery_mobile_rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
