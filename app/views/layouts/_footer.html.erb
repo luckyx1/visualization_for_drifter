@@ -1,0 +1,26 @@
+<nav id="footer" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#footer-navbar">
+          <span class="sr-only">Drifter searching options!</span>
+        </button>
+      </div>
+      <!-- Collect the nav links for footer -->
+      <div class="collapse navbar-collapse" id="footer-navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to image_tag("drifter.png"), drifter_path(:id => 1), class: "btn btn-inverse"%></li>
+          <li><%= link_to "History", drifter_path(:val => "all",:id => 1), class: "btn btn-inverse" %></li>
+          <li><%= link_to "Data", "/locations", class: "btn btn-inverse" %></li>
+          <li><%= link_to "Live", "/drifter", class: "btn btn-inverse" %></li>
+            <% if mobile_device? %>
+          <li> <%= link_to "Full Site", root_path(:mobile => 0 ), :rel => "external",class: "btn btn-inverse" %></li>
+            <% else %>
+          <li><%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-inverse"%></li>
+            <% end %>
+        </ul>
+        <button type="button" class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#footer-navbar">
+           <span class="sr-only">Close this bar</span>
+        </button>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

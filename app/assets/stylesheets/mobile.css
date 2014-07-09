@@ -1,0 +1,38 @@
+/*
+*= require jquery.mobile-1.4.3.min.css
+*= require locations.css.scss
+*/
+
+
+#locations-test{
+	/*background-color: #D2B48C;*/ 
+
+}
+#locations-menu{
+	/*background-color: red;*/
+}
+
+#map { 
+  height: 1000px;
+  width: 1000px;
+}
+.leaflet-map-pane{
+	z-index: 2! important;
+}
+.leaflet-google-layer{
+	z-index:1 !important;
+}
+
+#footer-navbar{
+  /*
+   position: absolute;
+  bottom: 0;
+  width: 100%;
+  Set the fixed height of the footer here 
+  height: 60px;
+  background-color: #f5f5f5; */
+}
+
+
+
+

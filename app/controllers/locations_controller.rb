@@ -2,6 +2,7 @@ class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
   skip_before_filter  :verify_authenticity_token
 
+
   # GET /locations
   # GET /locations.json
   def index
@@ -62,18 +63,42 @@ class LocationsController < ApplicationController
     end
   end
 
-  def test
-    @id = params[:id]
-    if @id==nil
-      @l0 = Location.all
-    else
+  def drifter
+    if params[:val].present?
+      @id = params[:id]
       @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+    elsif params[:id].present?
+      @id = params[:id]
+      @specific = true
+      @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+      @l0 = @l.last
+    else
+      @l0 = Location.all
     end
   end
 
   def simulation
     @l0 = Location.all
+  end
 
+  def menu
+  end
+
+  def history
+  end
+
+  def live
+    if params[:val].present?
+      @id = params[:id]
+      @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+    elsif params[:id].present?
+      @id = params[:id]
+      @specific = true
+      @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+      @l0 = @l.last
+    else
+      @l0 = Location.all
+    end
   end
 
   private

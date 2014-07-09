@@ -132,6 +132,9 @@ UPDATE opportunities SET id=nextval('opportunities_id_seq');
 UPDATE opportunities
 SET id = nextval('opportunities_id_seq');
 
+Run with puma:
+bundle exec puma -p 3001
+
 h1. 6. Maintainers
 
 This is a list of the team as of 06/05/2014. If you have committed to this project, please add your name and contact to the list.
