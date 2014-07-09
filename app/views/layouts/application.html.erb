@@ -6,8 +6,6 @@
     <!-- Basic Global javascript and css-->
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <!-- Mobile support-->
-    <%= stylesheet_link_tag 'mobile' if mobile_device? %>
     <!-- leaflet css and java script -->
     <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js" , "data-turbolinks-track" => true %>

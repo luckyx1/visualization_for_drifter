@@ -14,8 +14,8 @@
 			<p>These are here to see if this slows down rendering.</p>
 
 				<div class="ui-field-contain">
-		         <label for="name">Text Input:</label>
-		         <input type="text" name="name" id="name" value="">
+		         <label>Text Input:</label>
+		         <textarea></textarea>
 				</div>
 
 				<div class="ui-field-contain">
@@ -40,11 +40,11 @@
 
 			<a href="index.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-inline" data-rel="back">Take me back</a>
 		</div>
-
-		<div data-role="footer" data-theme="a">
-			<div style="margin:5px 10px;"><!-- To add a bit of spacing -->
-			<label for="search" class="ui-hidden-accessible">Search:</label>
-	        <input type="search" name="password" id="search" placeholder="Search..." value="">
-			</div>
-		</div><!-- /footer -->
+		<div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+		
 	</div>

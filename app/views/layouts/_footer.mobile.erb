@@ -13,7 +13,7 @@
           <li><%= link_to "Data", "/locations", class: "btn btn-info" %></li>
           <li><%= link_to "Live", "/live", class: "btn btn-info" %></li>
             <% if mobile_device? %>
-          <li> <%= link_to "Full Site", params.merge(:mobile => 0 ),class: "btn btn-info" %></li>
+          <li> <%= link_to "Full Site", root_path(:mobile => 0 ), :rel => "external",class: "btn btn-info" %></li>
             <% else %>
           <li><%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-info"%></li>
             <% end %>

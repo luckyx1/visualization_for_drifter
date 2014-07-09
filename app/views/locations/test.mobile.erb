@@ -1,7 +1,8 @@
+<link href="/assets/bootstrap_and_overrides.css?body=1" media="screen" rel="stylesheet" />
 <h1><center>Hello this is mobile!</center></h1>
 <center><p>
   <% if mobile_device? %>
-    <%= link_to "Full Site", params.merge(:mobile => 0 ),class: "btn btn-success" %>
+    <%= link_to "Full Site", root_path(:mobile => 0 ), :rel => "external",class: "btn btn-success" %>
   <% else %>
     <%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-success"%>
   <% end %>
