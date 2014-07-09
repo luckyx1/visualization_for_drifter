@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'puma'
 gem "rack-timeout"
 gem 'jquery_mobile_rails'
+gem 'twitter-bootstrap-rails' #added the static bootstrap css
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -30,7 +31,6 @@ group :doc do
   gem 'jbuilder', '~> 1.2'
 end
 
-  gem 'twitter-bootstrap-rails' #added the static bootstrap css
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails' # Use CoffeeScript for .js.coffee assets and views
