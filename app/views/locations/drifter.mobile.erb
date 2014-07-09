@@ -1,16 +1,51 @@
 <link href="/assets/bootstrap_and_overrides.css?body=1" media="screen" rel="stylesheet" />
-<h1><center>Hello this is mobile!</center></h1>
-<center><p>
-  <% if mobile_device? %>
-    <%= link_to "Full Site", root_path(:mobile => 0 ), :rel => "external",class: "btn btn-success" %>
-  <% else %>
-    <%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-success"%>
-  <% end %>
-</p>
 
-<h2> Please choose from the following drifters or select all</h2>
-<p>TODO: add the radio buttons here </p>
-<p>1</P>
-<p>20</p>
-<p>all<p>
-<%= link_to "Menu", menu_path, class: "btn btn-info"%></center>	
+<center><h2> Please choose from the following drifters or select all, then click menu</h2></center>
+<form>
+    <fieldset data-role="controlgroup" data-iconpos="right">
+        <legend>Drifter Options:</legend>
+        <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+        <label for="checkbox-h-6a">One</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+        <label for="checkbox-h-6b">Two</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Three</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Four</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Five</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Six</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Seven</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Eight</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Nine</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Ten</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Eleven</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Twelve</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Thirteen</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Fourteen</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Fiveteen</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Sixteen</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Seventeen</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Eighteen</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Ninetine</label>
+        <input disabled="" type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Twenty</label>
+        <input type="checkbox" name="checkbox-h-6z" id="checkbox-h-6z">
+        <label for="checkbox-h-6z">All</label>
+    </fieldset>
+</form>
+<%= link_to "Go to Menu", menu_path, class: "btn btn-info"%>	
