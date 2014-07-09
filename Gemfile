@@ -6,9 +6,6 @@ gem 'rails', '4.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-#needed for heroku
-gem 'rails_12factor'
-
 #protection
 gem 'protected_attributes'
 
@@ -23,6 +20,7 @@ gem 'puma'
 gem "rack-timeout"
 gem 'jquery_mobile_rails'
 gem 'twitter-bootstrap-rails' #added the static bootstrap css
+gem 'rails_12factor', group: :production
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
