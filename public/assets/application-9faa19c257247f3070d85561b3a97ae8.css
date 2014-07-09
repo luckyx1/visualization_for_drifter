@@ -7,7 +7,8 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
+
+
 
 
  */
@@ -22,11 +23,91 @@
 
 }
 #footer-navbar{
-	background-color:#005199;
+	background-color:#003366;
 	font-size: 2em;
 	border-radius: 2em;
+	width: 50%;
 }
 
+/* line 1, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
 /*!
  * Bootstrap v2.3.2
  *
@@ -7346,22 +7427,15 @@ a .icon-flip-vertical:before {
 .icon-renren:before {
   content: "\f18b";
 }
-/* line 4, /Users/Erick_laptop/Documents/Professor_Bayen/leaflet/leaflet/app/assets/stylesheets/locations.css.scss */
 #map {
-  height: 1000px;
-}
+  height: 1000px; }
 
-/* line 6, /Users/Erick_laptop/Documents/Professor_Bayen/leaflet/leaflet/app/assets/stylesheets/locations.css.scss */
 .leaflet-map-pane {
-  z-index: 2 !important;
-}
+  z-index: 2 !important; }
 
-/* line 9, /Users/Erick_laptop/Documents/Professor_Bayen/leaflet/leaflet/app/assets/stylesheets/locations.css.scss */
 .leaflet-google-layer {
-  z-index: 1 !important;
-}
+  z-index: 1 !important; }
 
-/* line 17, /Users/Erick_laptop/Documents/Professor_Bayen/leaflet/leaflet/app/assets/stylesheets/locations.css.scss */
 #sidebar {
   position: absolute;
   right: 0px;
@@ -7369,89 +7443,7 @@ a .icon-flip-vertical:before {
   top: 0px;
   width: 400px;
   height: 100%;
-  background-color: #005199;
-}
+  background-color: #005199; }
 
-/* line 28, /Users/Erick_laptop/Documents/Professor_Bayen/leaflet/leaflet/app/assets/stylesheets/locations.css.scss */
 #explanation {
-  color: yellow;
-}
-/* line 1, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-/* line 9, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-/* line 15, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-/* line 21, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-a {
-  color: #000;
-}
-/* line 23, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-a:visited {
-  color: #666;
-}
-/* line 26, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-a:hover {
-  color: #fff;
-  background-color: #000;
-}
-
-/* line 33, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-div.field, div.actions {
-  margin-bottom: 10px;
-}
-
-/* line 38, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-#notice {
-  color: green;
-}
-
-/* line 42, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-/* line 48, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-/* line 55, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
-}
-/* line 65, /Users/Erick_laptop/Desktop/leaflet/leaflet/app/assets/stylesheets/scaffolds.css.scss */
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
+  color: yellow; }
