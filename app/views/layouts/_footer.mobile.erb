@@ -1,26 +1,7 @@
-<nav id="footer" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#footer-navbar">
-          <span class="sr-only">Drifter searching options!</span>
-        </button>
-      </div>
-      <!-- Collect the nav links for footer -->
-      <div class="collapse navbar-collapse" id="footer-navbar">
-        <ul class="nav navbar-nav navbar-left">
-          <li><%= link_to image_tag("drifter.png"), test_path(:id => 1), class: "btn btn-info"%></li>
-          <li><%= link_to "History", history_path, class: "btn btn-info" %></li>
-          <li><%= link_to "Data", "/locations", class: "btn btn-info" %></li>
-          <li><%= link_to "Live", "/live", class: "btn btn-info" %></li>
-            <% if mobile_device? %>
-          <li> <%= link_to "Full Site", root_path(:mobile => 0 ), :rel => "external",class: "btn btn-info" %></li>
-            <% else %>
-          <li><%= link_to "Mobile Site", params.merge(:mobile => 1 ),class: "btn btn-info"%></li>
-            <% end %>
-        </ul>
-        <button type="button" class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#footer-navbar">
-           <span class="sr-only">Close this bar</span>
-        </button>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<div data-role="footer" data-theme="b" data-position="fixed">
+  You are currently in <%= params[:action] %>
+  <br>
+  <%if params[:action] == "live" %>
+    Select more here:<%= link_to "Back to menu", menu_path %>
+  <% end %>
+</div><!-- /footer -->

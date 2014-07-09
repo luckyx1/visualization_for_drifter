@@ -1,15 +1,7 @@
 /*
-
 *= require jquery.mobile-1.4.3.min.css
 *= require locations.css.scss
 */
-/*
- Sticky footer styles
--------------------------------------------------- */
-/*html {
-  position: relative;
-  min-height: 100%;
-}*/
 
 
 #locations-test{
@@ -22,6 +14,7 @@
 
 #map { 
   height: 1000px;
+  width: 1000px;
 }
 .leaflet-map-pane{
 	z-index: 2! important;

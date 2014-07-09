@@ -5,7 +5,7 @@ Leaflet::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'locations#test'
+   root 'locations#drifter'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -56,7 +56,7 @@ Leaflet::Application.routes.draw do
   #     resources :products
   #   end
   post 'data' => 'locations#create'
-  get "test" => 'locations#test', :as => "test"
+  get "drifter" => 'locations#drifter', :as => "drifter"
   get "simulation" => 'locations#simulation', :as => "simulation"
   get "menu" => 'locations#menu', :as => "menu"
   get "history" => "locations#history", :as => "history"

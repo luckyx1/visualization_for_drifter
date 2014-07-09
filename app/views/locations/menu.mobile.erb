@@ -1,15 +1,9 @@
-<link href="/assets/bootstrap_and_overrides.css?body=1" media="screen" rel="stylesheet" />
-<h1> Choose from one of the three options! </h1>
+<center><h1> Choose from one of the three options! </h1></center>
 <br>
-<%= link_to "Live", live_path,:rel => "external", class: "btn btn-info btn-lg btn-block"%>
-<br>	
 <br>
-<br>	
-<br><br>	
 <br>
-<%= link_to "History", history_path, class: "btn btn-info btn-lg btn-block"%>	
-<br>
-<br>	
-<br><br>	
-<br>
-<%= link_to "Data", locations_path, class: "btn btn-info btn-lg btn-block" %>
+<ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+    <li><%= link_to "Live", live_path,:rel => "external"%></li>
+    <li><%= link_to "History", history_path %></li>
+    <li><%= link_to "Data", locations_path %></li>
+</ul>

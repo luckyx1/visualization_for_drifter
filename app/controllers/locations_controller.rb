@@ -63,7 +63,7 @@ class LocationsController < ApplicationController
     end
   end
 
-  def test
+  def drifter
     if params[:val].present?
       @id = params[:id]
       @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
