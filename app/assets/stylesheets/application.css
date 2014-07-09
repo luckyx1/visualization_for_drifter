@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require scaffolds.css.scss
- *= require bootstrap_and_overrides.css.less
+ *= require bootstrap_and_overrides
  *= require locations.css.scss
  */
 #header{
