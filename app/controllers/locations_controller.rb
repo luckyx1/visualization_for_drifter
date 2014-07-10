@@ -114,6 +114,14 @@ class LocationsController < ApplicationController
     end
   end
 
+  def refresh_part
+  # get whatever data you need to a variable named @data
+  @data = Location.all
+  respond_to do |format|
+    format.js
+  end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_location
