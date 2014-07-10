@@ -107,8 +107,10 @@ class LocationsController < ApplicationController
       @specific = true
       @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
       @l0 = @l.last
+    elsif params[:action] =="live"
+      @l0 = Location.first
     else
-      @l0 = Location.all
+      @l0 =Location.all
     end
   end
 

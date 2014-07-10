@@ -1,7 +1,7 @@
 <div id="page-success" data-dom-cache="true">
 	<div data-role="header" data-theme="a">
 		<!-- header code-->
-		<h1>Select Drifter!</h1>
+		<h1>Drifter #1 History</h1>
 	</div>
 	<div id="map">	
 	<script>
@@ -118,12 +118,15 @@
 				    markerColor:'orange'
 				  });
 				
-				
+				var pointList = [];
 				<% @l0.each do |location| %>
 					<% valid = location.valid_input.to_s %>
 					<% name = location.drifter_name.to_s %>
 					<% time = location.time.to_s %>
 					<% speed = location.gps_speed %>
+					var pointA = new L.LatLng(<%=location.latitude%>, <%=location.longitude%>);
+					pointList.push(pointA);
+
 					  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
 					
 					var popup = L.popup();
@@ -135,6 +138,14 @@
 					}
 					map.on('click', onMapClick);
 				<% end %>
+				var firstpolyline = new L.Polyline(pointList, {
+				color: 'red',
+				weight: 3,
+				opacity: 0.5,
+				smoothFactor: 1
+
+				});
+				firstpolyline.addTo(map);
 			<% end %>
 	</script>
 </div>
