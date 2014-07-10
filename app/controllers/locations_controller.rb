@@ -74,8 +74,6 @@ class LocationsController < ApplicationController
       @l0 = @l.last
     else
       @l0 = Location.all
-      p params
-      p "in mobile"
     end
   end
 
@@ -84,10 +82,20 @@ class LocationsController < ApplicationController
   end
 
   def menu
-    p params
+    p "in menu"
+    if params.to_s.include? "checkbox"
+      session[:drifter]=[]
+      params.each {|key, value| 
+      if "#{key}".include? "checkbox"
+        #p "#{key}".last(2).to_s
+        session[:drifter].push "#{key}".last(1).to_i
+      end }
+    end
+    p session[:drifter]
   end
 
   def history
+    @l0 = Location.all
   end
 
   def live
