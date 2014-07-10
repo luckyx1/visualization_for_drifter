@@ -19,12 +19,6 @@ module Leaflet
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.precompile << "mobile.css"
-    config.assets.precompile << "jquery.mobile-1.4.3.min.js"
-    config.assets.precompile << "locations.css.coffee"
-    config.assets.precompile << "mobile.js"
-    config.assets.precompile << "locations.js.coffee"
-    config.assets.precompile << "jquery.js"
-    config.assets.precompile << "jquery.mobile-1.4.3.min.js"
+   
   end
 end
