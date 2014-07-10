@@ -4,30 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mobile Drifter</title>
-    <!-- mobile specific css, think of this as global css -->
+    <!-- gloabl css and js -->
     <%= stylesheet_link_tag "mobile" %>
     <%= javascript_include_tag "mobile"%>
-    <!--remove css here -->
-    <% if false %>
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- end globals -->
+    <% unless params[:action] != "live" %>
+        <!--leaflet css & js -->
+        <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js" , "data-turbolinks-track" => true %>
+        <!--leaflet fontawesome -->
+        <%= stylesheet_link_tag href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" , media: "all", "data-turbolinks-track" => true %>
+        <!-- leaflet fontawesome fusion -->
+        <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+        <script src="dist/leaflet.awesome-markers.js"></script>
+        <!-- integrating google map and leaflet -->
+        <%= javascript_include_tag "http://matchingnotes.com/javascripts/leaflet-google.js", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "http://maps.google.com/maps/api/js?v=3.2&sensor=false", "data-turbolinks-track" => true %>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <% end %>
-    <!--end remove css here -->
-    <!--leaflet css & js -->
-    <%= stylesheet_link_tag href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" , media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js" , "data-turbolinks-track" => true %>
-    <!--leaflet fontawesome -->
-    <%= stylesheet_link_tag href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" , media: "all", "data-turbolinks-track" => true %>
-    <!-- leaflet fontawesome fusion -->
-    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
-    <script src="dist/leaflet.awesome-markers.js"></script>
-    <!-- integrating google map and leaflet -->
-    <%= javascript_include_tag "http://matchingnotes.com/javascripts/leaflet-google.js", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "http://maps.google.com/maps/api/js?v=3.2&sensor=false", "data-turbolinks-track" => true %>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
   </head>
   <body id="<%= params[:controller]+"-"+params[:action] %>">
     <%= yield %>
     <%= render partial: "/layouts/footer" %>
   </body>
-
 </html>
