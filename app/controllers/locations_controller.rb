@@ -74,6 +74,8 @@ class LocationsController < ApplicationController
       @l0 = @l.last
     else
       @l0 = Location.all
+      p params
+      p "in mobile"
     end
   end
 
@@ -82,6 +84,7 @@ class LocationsController < ApplicationController
   end
 
   def menu
+    p params
   end
 
   def history
