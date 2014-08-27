@@ -82,9 +82,20 @@ class LocationsController < ApplicationController
   end
 
   def menu
+    p "in menu"
+    if params.to_s.include? "checkbox"
+      session[:drifter]=[]
+      params.each {|key, value| 
+      if "#{key}".include? "checkbox"
+        #p "#{key}".last(2).to_s
+        session[:drifter].push "#{key}".last(1).to_i
+      end }
+    end
+    p session[:drifter]
   end
 
   def history
+    @l0 = Location.all
   end
 
   def live
@@ -96,8 +107,10 @@ class LocationsController < ApplicationController
       @specific = true
       @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
       @l0 = @l.last
+    elsif params[:action] =="live"
+      @l0 = Location.first
     else
-      @l0 = Location.all
+      @l0 =Location.all
     end
   end
 

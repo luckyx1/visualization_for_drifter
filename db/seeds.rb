@@ -5,4 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Location.delete_all
 Location.create(:drifter_name => "Drifter #1",:latitude => "37.86977", :longitude => "-122.25972", :time => "12:00:01", :valid => true, :gps_speed => "1.9")
+Location.create(:drifter_name => "Drifter #1",:latitude => "37.8744", :longitude => "-122.25968", :time => "12:00:06", :valid => true, :gps_speed => "12.1")
