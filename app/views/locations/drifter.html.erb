@@ -1,7 +1,6 @@
+<% if first_long %>
 <div id="map">	
 	<script>
-			<%= first_long = Location.first.longitude %>
-			<%= first_lat = Location.first.latitude%>
 			var map = new L.Map('map', {center: new L.LatLng(<%= first_lat%>-0.36093, <%= first_long%>+.26494), zoom: 16});
 			//0.36093, -122.25803
       		var googleLayer = new L.Google('SATELLITE');
@@ -137,5 +136,8 @@
 			map.on('click', onMapClick);
 	</script>
 </div>
+<% else %>
+Please wait for first data point to come in...
+<% end %>
 
     
