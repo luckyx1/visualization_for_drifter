@@ -2,11 +2,21 @@ class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
   skip_before_filter  :verify_authenticity_token
 
+  def purge
+    Location.delete_all
+    redirect_to locations_path()
+  end
+
 
   # GET /locations
   # GET /locations.json
   def index
     @locations = Location.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @locations.to_csv }
+      format.xls { send_data @locations.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /locations/1

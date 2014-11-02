@@ -1,7 +1,16 @@
 <%- model_class = Location -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h4><%= link_to "Purge Database", purge_path,
+                                                :confirm => 'Pressing this will remove the whole database. Wish to continue?', 
+                                                :method => :delete,
+                                                :class => 'btn btn-mini btn-danger' %>
 </div>
+<p>
+  Download:
+  <%= link_to "CSV", locations_path(format: "csv") %> |
+  <%= link_to "Excel", locations_path(format: "xls") %>
+</p>
 <table class="table table-striped">
   <thead>
     <tr>
