@@ -11,7 +11,6 @@
           <li><%= link_to image_tag("drifter.png"), drifter_path(:id => 1), class: "btn btn-inverse"%></li>
           <li><%= link_to "History", "/history", class: "btn btn-inverse" %></li>
           <li><%= link_to "Data", "/locations", class: "btn btn-inverse" %></li>
-          <li><%= link_to "Live", "/drifter", class: "btn btn-inverse" %></li>
             <% if mobile_device? %>
           <li> <%= link_to "Full Site", root_path(:mobile => 0 ), :rel => "external",class: "btn btn-inverse" %></li>
             <% else %>
