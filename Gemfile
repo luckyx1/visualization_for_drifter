@@ -14,18 +14,28 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-#for location
-#gem 'geocoder'
-group :development do
-  gem "better_errors"
-  gem 'binding_of_caller'
-end
 
+# Use puma as the app server
 gem 'puma'
 gem "rack-timeout"
 gem 'jquery_mobile_rails'
 gem 'twitter-bootstrap-rails' #added the static bootstrap css
-gem 'rails_12factor', group: :production
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', :platforms => :ruby
+
+group :production do
+  gem 'rails_12factor'
+end
+
+group :development do
+  gem "better_errors"
+  gem 'binding_of_caller'
+  # use pry for debugger
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-rails'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,15 +52,3 @@ group :assets do
   gem 'less'
   gem 'less-rails'
 end
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', :platforms => :ruby
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]

@@ -14,4 +14,4 @@
 //= require twitter/bootstrap
 //= require bootstrap.js.coffee
 //= require turbolinks
-//= require locations.js.coffee
+//= require locations.js

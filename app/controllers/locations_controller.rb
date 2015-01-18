@@ -11,7 +11,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.where("created_at >= ?", Time.zone.now.beginning_of_day)
+    @locations = Location.find(:all,:order => "created_at DESC" )
     respond_to do |format|
       format.html
       format.csv { send_data @locations.to_csv }
