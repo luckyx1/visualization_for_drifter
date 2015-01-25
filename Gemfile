@@ -19,7 +19,12 @@ gem 'turbolinks'
 gem 'puma'
 gem "rack-timeout"
 gem 'jquery_mobile_rails'
+
 gem 'twitter-bootstrap-rails' #added the static bootstrap css
+gem 'less'
+gem 'less-rails'
+gem 'libv8'
+
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', :platforms => :ruby
@@ -48,7 +53,4 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails' # Use CoffeeScript for .js.coffee assets and views
   gem 'uglifier', '>= 1.0.3' # Use Uglifier as compressor for JavaScript assets
-  gem 'libv8'
-  gem 'less'
-  gem 'less-rails'
 end
