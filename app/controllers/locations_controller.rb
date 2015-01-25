@@ -36,15 +36,14 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(location_params)
-
+    @location = Location.new(params[:location])
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @location }
+        format.json { render :json => @location }
       else
         format.html { render action: 'new' }
-        format.json { render json: @location.errors, status: :unprocessable_entity }
+        format.json { render :json => @location.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -53,7 +52,7 @@ class LocationsController < ApplicationController
   # PATCH/PUT /locations/1.json
   def update
     respond_to do |format|
-      if @location.update(location_params)
+      if @location.update(params[:location])
         format.html { redirect_to @location, notice: 'Location was successfully updated.' }
         format.json { head :no_content }
       else
@@ -128,10 +127,5 @@ class LocationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_location
       @location = Location.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def location_params
-      params.permit( :latitude, :longitude, :time, :valid_input, :gps_speed, :drifter_name)
     end
 end

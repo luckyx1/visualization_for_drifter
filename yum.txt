@@ -1,0 +1,1 @@
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"location":{"latitude":"37.888","longitude":"-122.22","time":"1:01:32","valid_input":"true","gps_speed":"1.0", "drifter_name":"Drifter #2"}}' http://localhost:3000/data 
