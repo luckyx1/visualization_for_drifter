@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+  include LocationsHelper
   before_action :set_location, only: [:show, :edit, :update, :destroy]
   skip_before_filter  :verify_authenticity_token
 
