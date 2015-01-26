@@ -8,10 +8,11 @@ var Marker = {
 		var mark = $("#map");
 		if (mark.length > 0){//the page has this id on it
 			Marker.setvar();
+			console.log("map is active");
 		}
 	},
 	setvar: function(){
-		var adjust = L.AwesomeMarkers.icon({
+			var adjust = L.AwesomeMarkers.icon({
 			    icon: 'fa-adjust',
 			    prefix: 'fa',
 			    markerColor:'orange'
