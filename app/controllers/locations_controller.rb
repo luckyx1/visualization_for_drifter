@@ -74,16 +74,15 @@ class LocationsController < ApplicationController
   end
 
   def drifter
+    @specific = false #default behavior
     if params[:val].present?
-      @id = params[:id]
-      @l0 = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
+      @location = Location.find_all_by_drifter_name("Drifter #"+params[:id].to_s)
     elsif params[:id].present?
-      @id = params[:id]
       @specific = true
-      @l = Location.find_all_by_drifter_name("Drifter #"+@id.to_s)
-      @l0 = @l.last
+      @geopoint = Location.find_all_by_drifter_name("Drifter #"+params[:id].to_s)
+      @location = @geopoint.last
     else
-      @l0 = Location.all
+      @location = Location.all
     end
   end
 
@@ -124,9 +123,4 @@ class LocationsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_location
-      @location = Location.find(params[:id])
-    end
 end

@@ -111,19 +111,23 @@
 			    markerColor:'orange'
 			  });
 			<% if @specific %>
-				<% valid = @l0.valid_input.to_s %>
-				<% name = @l0.drifter_name.to_s %>
-				<% time = @l0.time.to_s %>
-				<% speed = @l0.gps_speed %>
-				  L.marker([ <%= @l0.latitude%> , <%= @l0.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
+				<% valid = @location.valid_input.to_s %>
+				<% name = @location.drifter_name.to_s %>
+				<% time = @location.time.to_s %>
+				<% speed = @location.gps_speed %>
+				  L.marker([ <%= @location.latitude%> , <%= @location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
 			<% else %>
-				<% @l0.each do |location| %>
-				<% valid = location.valid_input.to_s %>
-				<% name = location.drifter_name.to_s %>
-				<% time = location.time.to_s %>
-				<% speed = location.gps_speed %>
-				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
-				<% end%>
+				<% if @location %>
+					<% @location.each do |location| %>
+						<% valid = location.valid_input.to_s %>
+						<% name = location.drifter_name.to_s %>
+						<% time = location.time.to_s %>
+						<% speed = location.gps_speed %>
+						  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
+					<% end%>
+				<% else %>
+					$(#map).text(Something went wrong. Please contact roberterickhernandez@gmail.com for more information);
+				<% end %>
 			<% end %>
 			
 			var popup = L.popup();
