@@ -1,44 +1,18 @@
-<% if first_long %>
-<div id="map">	
-	<script>
+<% if Location.any? %>
+	<div id="map">	
+		<script>
 			var map = new L.Map('map', {center: new L.LatLng(<%= first_lat%>-0.36093, <%= first_long%>+.26494), zoom: 16});
 			//0.36093, -122.25803
       		var googleLayer = new L.Google('SATELLITE');
       		map.addLayer(googleLayer);
-	</script>
-
-	<script type="text/javascript">
-		<% if @specific %>
-				$('#map').append("<!-- This is specific -->");
-				<% valid = @location.valid_input.to_s %>
-				<% name = @location.drifter_name.to_s %>
-				<% time = @location.time.to_s %>
-				<% speed = @location.gps_speed %>
-				  L.marker([ <%= @location.latitude%> , <%= @location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
-		<% else %>
-			<% if @location %>
-				$('#map').append("<!-- we have the following points -->");
-				<% @location.each do |location| %>
-					<% valid = location.valid_input.to_s %>
-					<% name = location.drifter_name.to_s %>
-					<% time = location.time.to_s %>
-					<% speed = location.gps_speed %>
-					  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
-				<% end%>
-			<% else %>
-				$('#map').text(Something went wrong. Please contact roberterickhernandez@gmail.com for more information);
-			<% end %>
-		<% end %>		
-		var popup = L.popup();
-		function onMapClick(e) {
-			popup
-				.setLatLng(e.latlng)
-				.setContent("You clicked the map at " + e.latlng.toString())
-				.openOn(map);
-		}
-		map.on('click', onMapClick);
-	</script>
-</div>
+      		var smile = L.AwesomeMarkers.icon({
+			    icon: 'fa-smile-o',
+			    prefix: 'fa',
+			    markerColor:'orange'
+			});
+		</script>
+		<span id="message_received"> <%= render :partial => "locations/drifterElm" %></span>
+	</div>
 <% else %>
 	Please wait for first data point to come in...
 <% end %>
