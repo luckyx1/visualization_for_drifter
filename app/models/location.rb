@@ -10,5 +10,9 @@ class Location < ActiveRecord::Base
   		end
 	end
 
+	def self.to_json
+		super(:only [:latitude,:longitude,:time,:valid_input,:gps_speed,:drifter_name])
+	end
+
 end
 

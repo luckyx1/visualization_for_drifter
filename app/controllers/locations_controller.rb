@@ -1,6 +1,5 @@
 class LocationsController < ApplicationController
   include LocationsHelper
-  before_action :set_location, only: [:show, :edit, :update, :destroy]
   skip_before_filter  :verify_authenticity_token
 
   def purge
@@ -23,6 +22,9 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /locations/new
@@ -75,25 +77,29 @@ class LocationsController < ApplicationController
 
   def drifter
     @specific = false #default behavior
-    if params[:val].present?
-      @location = Location.find_all_by_drifter_name("Drifter #"+params[:id].to_s)
-    elsif params[:id].present?
-      @specific = true
-      @geopoint = Location.find_all_by_drifter_name("Drifter #"+params[:id].to_s)
-      @location = @geopoint.last
-    else
-      @location = Location.all
-    end
+    @location = 0
 
     respond_to do |format|
-      format.js 
-      format.html
+      format.js
+      format.html 
     end
   end
 
   def simulation
-    @l0 = Location.all
+    @msg = Location.all
+    respond_to do |format|
+      format.js
+      format.json { render json: @msg }
+    end
   end
+
+  def point
+    @location = Location.all
+    respond_to do |format|
+      format.html
+    end
+  end
+
 
   def menu
     p "in menu"
