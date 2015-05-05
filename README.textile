@@ -1,29 +1,59 @@
 h1. README for Visualization Tool for Professor Bayen
 
-
+This is a link to the project:["Floating Sensors Network":http://float.berkeley.edu/drifters].
+!http://float.berkeley.edu/sites/default/files/imagecache/gallery_lightbox/gallery_images/IMG_9662border.jpg!
 
 h1. Useful links
 
 h2. Learn SQL comands for POSTSQL DB
 * "Postsql":http://www.postgresql.org/docs/9.3/static/sql.html
 
-h2. Resource page of our previous work:
-* "Drifters":http://float.berkeley.edu/drifters
+h2. Resource page of our android application:
+* "Android application":https://github.com/deepaktalwardt/WaterDrifterAndroid
+* "Android application on Google Play store":https://play.google.com/store/apps/details?id=hernandez.robert.drifter&hl=en
 
-h1. Install Visualization tool locally
+h1. Installing the Rails Visualization tool locally
 
-Installing the tool to run locally is trival, and steps are as follows.
+Installing the application means you must have rails set up, so lets install the packages.
 
 h2. 1. Prequisites
 
-To Install the toll, you must have POSTSQL downloaded locally on your computer
 
+h2. Windows
+
+Please do not try to use Rails with Windows. Performance will be greatly hindered,and gems will constantly fail to build. Linux is a free alternative that you can use with VirtualBox(also free).
+* "Virtualbox":https://www.virtualbox.org/wiki/Downloads
+* "Linux(Ubuntu)":http://www.ubuntu.com/download
+
+h2. OS X
+
+Please instaill Xcode from the apps store, and then install Xcode Command Line Tools from Xcode -> Preferences -> Downloads, or install the standalone Xcode Command Line Tools package from ["here":https://developer.apple.com/downloads/].
+
+Next install homebrew
+
+* "Homebrew":http://brew.sh/
+
+
+h2. Postgres
+
+Since we use Postgres for our PostSQL database, the following is recommended:
+
+Plan A(if using mac):
+use this nifty guide:
+* "guide":https://www.codefellows.org/blog/three-battle-tested-ways-to-install-postgresql
+
+Plan B(if using homebrew)
+brew install postgres
+
+Plan C(otherwise)
 Download POSTSQL stable version at http://www.postgresql.org/download/
 
-h2. 2. Install the tool
+h2. 2. Pull the code from Github
 
 To get a new repository on your local computer:
 
+* Fire up your terminal and type in the following:
+* cd Desktop
 * Starting from Desktop, mkdir "visualization" on your terminal
 * cd "visualization"
 * git clone git@github.com:luckyx1/visualization_for_drifter.git
@@ -41,7 +71,7 @@ h2. 3 Daily Visualization use
 To check if new updates has happened (while you have created no new content)
 * git pull
 
-To check if new updates has happpened(while you have created content) 
+To check if new updates has happpened(while you have created content)
 * git add -A //Only do this if you are working on a branch
 * git commit -m "what you were working on"
 * git pull
@@ -50,7 +80,7 @@ To check if new updates has happpened(while you have created content)
 How to push your changes
 * git add "file_name"
 * git commit -m "what you were working on"
-* git pull 
+* git pull
 * -fix any merge conflicts
 * git push
 
@@ -107,7 +137,7 @@ To use SQL with rails
 * rails console
 * ActiveRecord::Base.connection.execute('SELECT * FROM users')
 
-To use POSTSQL 
+To use POSTSQL
 * psql
 * \c "InternLeauge_development" lets you connect to that specific db
 * \list shows all the db available
@@ -120,9 +150,9 @@ To update the pgsl db:migrate(a hack)
 *heroku run rake db:schema:load
 
 How to find empty params in old data, then just update it manually when you find it:
-* SELECT locaton, id 
-* FROM mytable 
-* WHERE COALESCE(location, '') = '' 
+* SELECT locaton, id
+* FROM mytable
+* WHERE COALESCE(location, '') = ''
 * ;
 
 How to reindex the numbers
@@ -145,7 +175,7 @@ h2. Drift team~
 *Deepak* <r.hernandez@berkeley.edu>
 *Nicolas Plain* <r.hernandez@berkeley.edu>
 
-h2. Written by (last update June 5, 2014) 
+h2. Written by (last update June 5, 2014)
 *Robert Erick Hernandez Jr*
 
 
