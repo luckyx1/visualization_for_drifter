@@ -48,6 +48,20 @@ brew install postgres
 Plan C(otherwise)
 Download POSTSQL stable version at http://www.postgresql.org/download/
 
+h2. Heroku
+
+This tutorial will have you deploying a Ruby app in minutes.
+
+Hang on for a few more minutes to learn how it all works, so you can make the most out of Heroku.
+
+* "a free Heroku account":https://signup.heroku.com/signup/dc
+Ruby installed - see the installation guides for Ruby and Rails on
+* "OSX":http://guides.railsgirls.com/install/#setup-for-os-x
+* "Linux":http://guides.railsgirls.com/install/#setup-for-linux
+* "Bundler installed - run gem install bundler":http://bundler.io/
+
+
+
 h2. 2. Pull the code from Github
 
 To get a new repository on your local computer:
@@ -175,7 +189,7 @@ h2. Drift team~
 *Deepak* <r.hernandez@berkeley.edu>
 *Nicolas Plain* <r.hernandez@berkeley.edu>
 
-h2. Written by (last update June 5, 2014)
+h2. Written by (last update June 5, 2014)/ New update (May 4, 2015)
 *Robert Erick Hernandez Jr*
 
 
