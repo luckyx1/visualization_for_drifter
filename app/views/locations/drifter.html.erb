@@ -1,5 +1,5 @@
 <% if first_long %>
-<div id="map">	
+<div id="map">
 	<script>
 			var map = new L.Map('map', {center: new L.LatLng(<%= first_lat%>-0.36093, <%= first_long%>+.26494), zoom: 16});
 			//0.36093, -122.25803
@@ -113,19 +113,19 @@
 			<% if @specific %>
 				<% valid = @l0.valid_input.to_s %>
 				<% name = @l0.drifter_name.to_s %>
-				<% time = @l0.time.to_s %>
+				<% time = @l0.created_at.strftime('%b %d, %Y %l:%M:%S %p') %>
 				<% speed = @l0.gps_speed %>
 				  L.marker([ <%= @l0.latitude%> , <%= @l0.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
 			<% else %>
 				<% @l0.each do |location| %>
 				<% valid = location.valid_input.to_s %>
 				<% name = location.drifter_name.to_s %>
-				<% time = location.time.to_s %>
+				<% time = location.created_at.strftime('%b %d, %Y %l:%M:%S %p') %>
 				<% speed = location.gps_speed %>
 				  L.marker([ <%= location.latitude%> , <%= location.longitude%>], {icon: smile, riseOnHover:true}).addTo(map).bindPopup("<b>"+"<%= name %>"+", "+"<%= time %>"+". My current speed is "+"<%= speed %>"+"</b>").openPopup();
 				<% end%>
 			<% end %>
-			
+
 			var popup = L.popup();
 			function onMapClick(e) {
 				popup
@@ -140,4 +140,3 @@
 Please wait for first data point to come in...
 <% end %>
 
-    

@@ -2,7 +2,7 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
   <h4><%= link_to "Purge Database", purge_path,
-                                                :confirm => 'Pressing this will remove the whole database. Wish to continue?', 
+                                                :confirm => 'Pressing this will remove the whole database. Wish to continue?',
                                                 :method => :delete,
                                                 :class => 'btn btn-mini btn-danger' %>
 </div>
@@ -34,7 +34,7 @@
         <td><%= location.drifter_name %></td>
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
-        <td><%= location.created_at.strftime('%A, %d %b %Y %l:%M:%S %p') %></td>
+        <td><%= location.created_at.strftime('%b %d, %Y %l:%M:%S %p') %></td>
         <td><%= location.gps_speed %></td>
         <td><%= location.valid_input %></td>
         <td>
