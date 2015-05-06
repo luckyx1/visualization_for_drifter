@@ -36,7 +36,14 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(params[:location])
+    @location =
+      if params[:location].exist?
+        Location.new(params[:location])
+      elsif params[:drifter_name].exist?
+        Location.new(params)
+      else
+        Location.new()
+      end
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }
@@ -94,7 +101,7 @@ class LocationsController < ApplicationController
     p "in menu"
     if params.to_s.include? "checkbox"
       session[:drifter]=[]
-      params.each {|key, value| 
+      params.each {|key, value|
       if "#{key}".include? "checkbox"
         #p "#{key}".last(2).to_s
         session[:drifter].push "#{key}".last(1).to_i
