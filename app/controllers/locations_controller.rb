@@ -37,9 +37,9 @@ class LocationsController < ApplicationController
   # POST /locations.json
   def create
     @location =
-      if params[:location].exist?
+      if params.has_key? :location
         Location.new(params[:location])
-      elsif params[:drifter_name].exist?
+      elsif params.has_key? :drifter_name
         Location.new(params)
       else
         Location.new()
