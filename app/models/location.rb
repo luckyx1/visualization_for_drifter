@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-	attr_accessible  :latitude, :longitude, :time, :valid_input, :gps_speed, :drifter_name
+	attr_accessible  :latitude, :longitude, :time, :valid_input, :gps_speed, :drifter_name, :sensor_data, :sensor_name
 
 	def self.to_csv(options = {})
   		CSV.generate(options) do |csv|

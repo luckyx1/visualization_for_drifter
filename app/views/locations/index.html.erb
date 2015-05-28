@@ -23,7 +23,8 @@
       <th><%= model_class.human_attribute_name(:longitude) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%= model_class.human_attribute_name(:gps_speed) %></th>
-      <th><%= model_class.human_attribute_name(:valid_input) %></th>
+      <th><%= model_class.human_attribute_name(:sensor_name) %></th>
+      <th><%= model_class.human_attribute_name(:sensor_data) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -36,7 +37,8 @@
         <td><%= location.longitude %></td>
         <td><%= location.created_at.strftime('%b %d, %Y %l:%M:%S %p') %></td>
         <td><%= location.gps_speed %></td>
-        <td><%= location.valid_input %></td>
+        <td><%= location.sensor_name %></td>
+        <td><%= location.sensor_data %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_location_path(location), :class => 'btn btn-mini' %>
